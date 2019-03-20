@@ -20,8 +20,7 @@
 				</div>
 			</el-col>
 			<el-col :span="10"  class="header_center">
-					<img src="../img/logo.png" />
-					<span class="username">大数据智慧墙</span>
+					<img src="../img/logoAll.png" />
 			</el-col>
 			<el-col :span="7"  class="header_right">
 				您是今天的第 <span></span> 位读者
@@ -55,8 +54,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 50px;
-		background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3));
+		height: 52px;
+		background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6));
 	}
 	#myheader_app .header_left .timer {
 		font-size: 22px !important;
@@ -77,7 +76,7 @@
 		}
 
 	#myheader_app .header_center {
-		background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1));
+		/* background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)); */
 		/* width: 100%; */
 		height: 100%;
 		/* position: absolute;
@@ -92,8 +91,8 @@
 		right: 0px;
 		top: 0px; */
 		/* width: 300px; */
-		height: 50px;
-		background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3));
+		height: 52px;
+		background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6));
 		text-align: right;
 		padding-right: 20px;
 		padding-top: 20px;
@@ -111,11 +110,11 @@
 		margin-bottom: -5px;
 	}
 
-	#myheader_app img {
+	/* #myheader_app img {
 		width: 300px;
 		height: 50px;
 		margin-top: 35px;
-	}
+	} */
 	#myheader_app .username {
 		font-size: 40px;
 		position: relative;

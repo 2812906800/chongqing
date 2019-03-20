@@ -59,34 +59,108 @@
 					<div class="left_two_son">
 						<el-row class='topList'>
 							<el-col :span="24">
-								月度借阅排行
+								<img src="../img/monthList.png" />
 							</el-col>
 						</el-row>
 						<el-row>
 							<el-col :span="24">
-								<el-tabs v-model="activeName" :activeName="activeName">
-									<el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-									<el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-									<el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-									<el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
+								<el-tabs v-model="activeName" class='mothList'>
+									<el-tab-pane label="图书类别" name="second1">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="读者借阅" name="second2">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="图书借阅" name="second3">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="各部门" name="second4">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="公安专业 图书借阅" name="second5">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="公安专业老师借阅" name="second6">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									<el-tab-pane label="公安专业 学生借阅" name="second7">
+										<el-row v-for="item in toplist">
+											<el-col :span="24">
+												<div class="mothList_son1">
+													<span class="left"><img :src="item.src" />{{item.name}}</span>
+													<span class="center"><img src="../img/line.png" /></span>
+													<span class="right">{{item.number}}</span>
+												</div>
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+
 								</el-tabs>
+
 
 							</el-col>
 						</el-row>
-						<!-- <el-row>
-												<el-col :span="24">
-													<div class="">
-														<div class="block">
-															<el-carousel height="150px">
-																<el-carousel-item v-for="item in 4" :key="item">
-																	<h3>{{ item }}</h3>
-																</el-carousel-item>
-															</el-carousel>
-														</div>
-													</div>
-												</el-col>
-											</el-row> -->
+						
+						<!-- <el-row v-for="item in classList">
 
+							<el-col :span="3">
+								<div class="">{{item}}</div>
+							</el-col>
+						</el-row>
+						<el-row>
+							<el-col :span="24">
+								<div class=""></div>
+							</el-col>
+						</el-row>
+ -->
 						<span class="son1"></span>
 						<span class="son2"></span>
 						<span class="son3"></span>
@@ -96,22 +170,50 @@
 				</el-row>
 				<el-row class="left_one left_two">
 					<div class="left_two_son">
-						<el-row class='topList'>
-							<el-col :span="24">
-								月度借阅排行
+						<el-row class='leftNew'>
+							<!-- <el-row class='topList'> -->
+								<el-col :span="24">
+									<el-tabs v-model="activeName" class='mothList'>
+										<el-tab-pane label="新书推荐" name="second1">
+											<el-row>
+												<el-col :span="24">
+													<img class="bookimg" src="../img/newbook.png"/>
+												</el-col>
+											</el-row>
+											
+							
+									
+							
+									</el-tab-pane>
+									<el-tab-pane label="专家推荐" name="second7">
+										<el-row>
+											<el-col :span="24">
+												<img class="bookimg" src="../img/newbook.png" />
+											</el-col>
+										</el-row>
+									</el-tab-pane>
+									</el-tabs>
+								</el-col>
+							<!-- </el-row> -->
+							<!-- <el-col :span="5">
+								新书推荐
 							</el-col>
-						</el-row>
-						<el-row>
-							<el-col :span="24">
-								<el-tabs v-model="activeName" :activeName="activeName">
-									<el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-									<el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-									<el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-									<el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-								</el-tabs>
+							<el-col :span="1">
 
 							</el-col>
+							<el-col :span="5">
+								专家推荐
+							</el-col>
+							<el-col :span="13">
+
+							</el-col> -->
 						</el-row>
+						<!-- <el-row>
+							<el-col :span="24">
+								<img src="../img/newbook.png" style="width: 100%;" />
+
+							</el-col>
+						</el-row> -->
 
 
 						<span class="son1"></span>
@@ -172,28 +274,33 @@
 
 					</el-row>
 					<el-row class="left_one left_two">
-						<div>
-							<el-row class='topList_rigth'>
-								<el-col :span="6">
-									活动展示
+						<div style="width: 100%;">
+							<el-row class='topList_rigth tableList'>
+								<el-col :span="4">
 								</el-col>
-								<el-col :span="6">
-
+								<el-col :span="4">
+									本年借/还书人次
 								</el-col>
-								<el-col :span="6">
-
+								<el-col :span="4">
+									本年借/还书册次
 								</el-col>
-								<el-col :span="6">
-									<span>视频</span>
-									<span>/图片</span>
+								<el-col :span="4">
+									馆藏种类数
 								</el-col>
-							</el-row>
-							<el-row>
-								<el-col :span="24" class='right_one_two'>
-
-
+								<el-col :span="4">
+									年度新增馆藏数
+								</el-col>
+								<el-col :span="4">
+									生均馆藏量
 								</el-col>
 							</el-row>
+							<el-row v-for="item in tablelist" class="tableList">
+								<el-col v-for="numbers in item" :span="4">
+									{{numbers}}
+								</el-col>
+
+							</el-row>
+
 
 
 							<span class="son1"></span>
@@ -205,12 +312,18 @@
 					</el-row>
 					<el-row>
 						<el-col :span="24">
-							<div class="grid-content bg-purple-dark"></div>
+							<div>
+								<div id="pTime">
+
+								</div>
+							</div>
 						</el-col>
 					</el-row>
 					<el-row>
 						<el-col :span="24">
-							<div class="grid-content bg-purple-dark"></div>
+							<div id="bookTime">
+
+							</div>
 						</el-col>
 					</el-row>
 				</div>
@@ -220,23 +333,21 @@
 					<el-row class="left_one left_two">
 						<div>
 							<el-row class='topList_rigth'>
-								<el-col :span="6">
+								<el-col :span="8">
 									活动展示
 								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 
 								</el-col>
-								<el-col :span="6">
 
-								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 									<span>视频</span>
 									<span>/图片</span>
 								</el-col>
 							</el-row>
 							<el-row>
 								<el-col :span="24" class='right_one_two'>
-
+									<img src="../img/vd.png" />
 
 								</el-col>
 							</el-row>
@@ -252,34 +363,28 @@
 					<el-row class="left_one left_two">
 						<div>
 							<el-row class='topList_rigth'>
-								<el-col :span="6">
+								<el-col :span="8">
 									活动公告
 								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 
 								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 
 								</el-col>
-								<el-col :span="6">
 
-								</el-col>
 							</el-row>
 							<el-row>
 								<el-col :span="8" class='right_two_son'>
-
+									<img src="../img/active1.png" />
 								</el-col>
 								<el-col :span="8" class='right_two_son'>
-
+									<img src="../img/active2.png" />
 								</el-col>
 								<el-col :span="8" class='right_two_son'>
-
+									<img src="../img/active3.png" />
 								</el-col>
-
-
 							</el-row>
-
-
 							<span class="son1"></span>
 							<span class="son2"></span>
 							<span class="son3"></span>
@@ -290,15 +395,13 @@
 					<el-row class="left_one left_two">
 						<div>
 							<el-row class='topList_rigth'>
-								<el-col :span="8">
+								<el-col :span="10">
 									借书到期通报
 								</el-col>
-								<el-col :span="8">
+								<el-col :span="14">
 
 								</el-col>
-								<el-col :span="8">
 
-								</el-col>
 
 							</el-row>
 							<el-row v-for="(item,index) in 5" v-if="index<5" style="width: 350px;">
@@ -319,30 +422,21 @@
 					<el-row class="left_one left_two">
 						<div>
 							<el-row class='topList_rigth'>
-								<el-col :span="6">
+								<el-col :span="8">
 									热门检索词
 								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 
 								</el-col>
-								<el-col :span="6">
+								<el-col :span="8">
 
 								</el-col>
-								<el-col :span="6">
 
-								</el-col>
 							</el-row>
 							<el-row>
-								<el-col :span="8" class='right_two_son'>
-
+								<el-col :span="24" class='hotKey'>
+									<img src="../img/hotkey.png" />
 								</el-col>
-								<el-col :span="8" class='right_two_son'>
-
-								</el-col>
-								<el-col :span="8" class='right_two_son'>
-
-								</el-col>
-
 
 							</el-row>
 
@@ -369,19 +463,98 @@
 
 <script>
 	import echarts from 'echarts';
+	// import require form '';
 	export default {
 		name: 'home',
-		data: function () {
+		data: function() {
 			return {
-				activeName: 'first',
-				classList: ['first', 'second', 'third', 'fourth']
+				activeName: 'second1',
+				classList: ['图书类别', '读者借阅', '图书借阅', '各部门', '公安专业图书借阅', '公安专业老师借阅', '公安专业学生借阅'],
+				index: 1,
+				bookList: [1, 2, 3, 4, 5, 6, 7],
+				toplist: [{
+					src: require("../img/top1.png"),
+					name: "《1》",
+					number: 1
+				}, {
+					src: require("../img/top2.png"),
+					name: "《2》",
+					number: 2
+				}, {
+					src: require("../img/top3.png"),
+					name: "《3》",
+					number: 3
+				}, {
+					src: require("../img/top4.png"),
+					name: "《4》",
+					number: 4
+				}, {
+					src: require("../img/top5.png"),
+					name: "《55》",
+					number: 5
+				}, {
+					src: require("../img/top6.png"),
+					name: "《6》",
+					number: 6
+				}],
+				tablelist: [{
+					name: "公安专业",
+					pNum: "451711/252053",
+					bookNum: "45421/1445",
+					claasNum: "11545421",
+					newNum: "454414515",
+					avgNum: "154545"
+				}, {
+					name: "非公安专业",
+					pNum: "254125/154574",
+					bookNum: "12471/6515",
+					claasNum: "752651",
+					newNum: "12111202",
+					avgNum: "244155"
+				}]
+
 			}
 		},
 		mounted() {
 			this.jhNum();
-			this.handleClick();
+			// this.handleClick();
+			this.peopleTime();
+			this.bookTime();
+			var mothtop = document.querySelector(".mothList");
+			var _this = this;
+			// 			var t1 = setInterval(function() {
+			// 				// console.log(_this.index)
+			// 				// console.log(mothtop);
+			// 				mothtop.click();
+			// 				_this.activeName = "second" + _this.index.toString();
+			// 				console.log(_this.activeName)
+			// 				if (_this.index >= 7) {
+			// 					return _this.index = 1;
+			// 				}
+			// 				_this.index++;
+			// 
+			// 
+			// 			}, 3000)
+			// clearInterval(t1);
 		},
 		methods: {
+			// 			handleClick(tab, event) {
+			// 				console.log(111)
+			// 							var t1=setInterval(function (){
+			// 									
+			// 										this.activeName="second"+this.index;
+			// 										console.log(this.activeName)
+			// 										if(index>=7){
+			// 											return this.index=0;
+			// 											
+			// 										}
+			// 										this.index++;
+			// 									
+			// 									
+			// 								},800000)
+			// 								clearInterval(t1);
+			// 								// console.log(tab, event);
+			// 			},
 			jhNum() {
 				// 基于准备好的dom，初始化echarts实例
 				let myChart = this.$echarts.init(document.getElementById('jhNum'));
@@ -526,19 +699,206 @@
 					]
 				});
 			},
-			handleClick(tab, event) {
-				// 				setInterval(function (){
-				// 					for(var i=0;i<4;i++){
-				// 						this.activeName=this.classList[i];
-				// 						console.log(this.classList[i])
-				// 						if(i=4){
-				// 							return i=0;
-				// 							
-				// 						}
-				// 					}
-				// 					
-				// 				},2000)
-				// 				console.log(tab, event);
+
+			peopleTime() {
+				// 基于准备好的dom，初始化echarts实例
+				let myChart2 = this.$echarts.init(document.getElementById('pTime'));
+				// 绘制图表
+				myChart2.setOption({
+					title: {
+						text: '各时间段入馆人次',
+						x: 'center',
+						textStyle: {
+							color: "#fff"
+						}
+					},
+					textStyle: {
+						color: '#ccc', // 图例文字颜色,
+						fontSize: 18
+					},
+					xAxis: {
+						// type: 'category',
+						axisLine: {
+							lineStyle: {
+								color: '#eee',
+							}
+						},
+						// 						axisLabel:{
+						// 							textStyle: {
+						// 								// color: '#ccc', // 图例文字颜色,
+						// 								fontSize: 18
+						// 							}
+						// 						},
+
+
+						boundaryGap: false,
+						data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+					},
+					yAxis: {
+						type: 'value',
+						axisLine: {
+							lineStyle: {
+								color: '#999',
+								fontSize: '18px'
+							}
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: 'dotted',
+								color: '#0da1ea'
+							}
+						}
+					},
+					series: [{
+						data: [820, 932, 901, 934, 1290, 1330, 1320],
+						type: 'line',
+						areaStyle: {},
+						smooth: true,
+						label: {
+							normal: {
+								show: true,
+								position: 'top',
+								color: "#fff",
+								fontSize: "10px"
+							}
+						},
+						itemStyle: {
+							// color: "#68c030"
+							normal: { //颜色渐变
+								color: {
+									type: 'linear',
+									x: 0,
+									y: 0,
+									x2: 0,
+									y2: 1,
+									colorStops: [{
+										offset: 0,
+										color: 'rgba(81,243,255,1)' // 0% 处的颜色
+									}, {
+										offset: 1,
+										color: 'rgba(81,243,255,0.5)' // 100% 处的颜色
+									}],
+									global: false // 缺省为 false
+								}
+							}
+						}
+
+					}]
+				})
+			},
+			bookTime() {
+				// 基于准备好的dom，初始化echarts实例
+				let myChart3 = this.$echarts.init(document.getElementById('bookTime'));
+				// 绘制图表
+				myChart3.setOption({
+					title: {
+						text: '各时间段借还册数',
+						x: 'center',
+						textStyle: {
+							color: "#fff"
+						}
+					},
+					textStyle: {
+						color: '#ccc', // 图例文字颜色,
+						fontSize: 18
+					},
+					xAxis: {
+						boundaryGap: false,
+						type: 'category',
+						axisLine: {
+							lineStyle: {
+								color: '#eee',
+							}
+						},
+						data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+					},
+					yAxis: {
+						type: 'value',
+						axisLine: {
+							lineStyle: {
+								color: '#999',
+							}
+						},
+						splitLine: {
+							show: true,
+							lineStyle: {
+								type: 'dotted',
+								color: '#0da1ea'
+							}
+						}
+					},
+					legend: {
+						show: true,
+						icon: 'rect',
+						padding: 36,
+						textStyle: {
+							color: '#fff',
+							fontSize: 12,
+						},
+						data: [{
+							name: '借书册数',
+							color: ''
+						}, {
+							name: '还书册数'
+						}]
+					},
+					series: [{
+							name: "借书册数",
+							data: [820, 932, 901, 934, 1290, 1330, 1320],
+							type: 'line',
+							areaStyle: {},
+							smooth: true,
+							itemStyle: {
+								// color: "#68c030"
+								normal: { //颜色渐变
+									color: {
+										type: 'linear',
+										x: 0,
+										y: 0,
+										x2: 0,
+										y2: 1,
+										colorStops: [{
+											offset: 0,
+											color: 'rgba(192,106,106,1)' // 0% 处的颜色
+										}, {
+											offset: 1,
+											color: 'rgba(232,123,113,0.5)' // 100% 处的颜色
+										}],
+										global: false // 缺省为 false
+									}
+								}
+							}
+						},
+						{
+							name: "还书册数",
+							data: [754, 999, 111, 444, 1111, 1555, 1320],
+							type: 'line',
+							areaStyle: {},
+							smooth: true,
+							itemStyle: {
+								// color: "#68c030"
+								normal: { //颜色渐变
+									color: {
+										type: 'linear',
+										x: 0,
+										y: 0,
+										x2: 0,
+										y2: 1,
+										colorStops: [{
+											offset: 0,
+											color: 'rgba(159,243,68,1)' // 0% 处的颜色
+										}, {
+											offset: 1,
+											color: 'rgba(159,243,68,0.5)' // 100% 处的颜色
+										}],
+										global: false // 缺省为 false
+									}
+								}
+							}
+						}
+					]
+				})
 			}
 		}
 	}
@@ -612,6 +972,7 @@
 		font-size: 14px;
 		color: #ddd;
 	}
+
 	/* 
 	#home_app .left_two {
 		justify-content: flex-start !important;
@@ -621,15 +982,15 @@
 	#home_app .left_two .left_two_son {
 		width: 100%;
 		height: 100%;
-		padding-left: 10px;
+		padding: 0px 10px;
 	}
 
 	.el-tabs__item {
-		color: #fff !important;
+		color: #fff;
 	}
 
 	#home_app .left_one .topList {
-		margin: -20px 0px 10px -350px;
+		margin: -20px 0px 10px -273px;
 	}
 
 	#home_app .left_one .left_one_one1 {
@@ -663,6 +1024,56 @@
 		-webkit-text-fill-color: transparent;
 	}
 
+	#home_app .el-tabs__item {
+		font-size: 10px !important;
+		width: 60px;
+		/* word-wrap: break-all; */
+		white-space: pre-line;
+		padding: 0px !important;
+		height: auto;
+		margin-top: -10px;
+		/* margin-bottom: -10px; */
+	}
+
+	#home_app .mothList {
+		width: 100%;
+		/* margin-left: 10px;
+		padding-right: 20px; */
+	}
+
+	#home_app .mothList .mothList_son1 {
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: 400;
+		color: #eee;
+		white-space: nowrap;
+	}
+
+	#home_app .mothList .left {
+		/* position: absolute;
+		left: 0px; */
+		width: 100%;
+	}
+
+	#home_app .mothList .center {
+		/* position: absolute;
+		left: 0px;
+		margin-top: 10px; */
+		width: auto;
+		/* display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; */
+	}
+
+	#home_app .mothList .right {
+		/* z-index: 100;
+		text-align: right;
+		position: absolute;
+		right: 0px; */
+		width: 100%;
+	}
+
 	#home_app .left_one .left_one_two2 {
 		background: linear-gradient(to bottom, #fdb25f 0%, #d5ce37 100%);
 		font-size: 26px;
@@ -678,15 +1089,44 @@
 		font-weight: 500;
 	}
 
+	#home_app .leftNew {
+		margin: 0px 0px 10px;
+	}
+
+	#home_app .leftNew div {
+		/* border: 1px solid #0c3495; */
+		padding: 5px 0px;
+		/* background-color: rgba(5, 79, 245, 0.2); */
+	}
+
+	#home_app .leftNew .el-tabs__header {
+		margin: -35px 0 -30px;
+	}
+	
+	#home_app .leftNew .el-tabs__item.is-active {
+		border: 1px solid #0c3495;
+		color: #fff;
+		font-size: 22px;
+		background-color: rgba(5, 79, 245, 0.2);
+	}
+	#home_app .leftNew  .el-tabs__active-bar {
+		background-color: rgba(0,0,0,0);
+	}
+	#home_app .leftNew  .bookimg {
+		 z-index: 100;
+		 width: 100%;
+	 }
 	#home_app .home_center {
 		background-color: rgba(1, 1, 1, 0);
 		height: 950px;
 		padding: 30px;
 	}
+
 	#home_app .home_center .center_one {
 		/* font-weight: 400; */
 		margin-bottom: 20px;
 	}
+
 	#home_app .home_center .center_one_son1 {
 		background: linear-gradient(to bottom, #f4ff7f 0%, #68de2c 100%);
 		background-clip: text;
@@ -696,6 +1136,7 @@
 		text-fill-color: transparent;
 		-webkit-text-fill-color: transparent;
 	}
+
 	#home_app .home_center .center_one_son2 {
 		background: linear-gradient(to bottom, #53f5ff 0%, #0da1ea 100%);
 		background-clip: text;
@@ -705,6 +1146,7 @@
 		text-fill-color: transparent;
 		-webkit-text-fill-color: transparent;
 	}
+
 	#home_app .home_center .center_one_son3 {
 		background: linear-gradient(to bottom, #ff9a99 0%, #ff765b 100%);
 		background-clip: text;
@@ -714,13 +1156,35 @@
 		text-fill-color: transparent;
 		-webkit-text-fill-color: transparent;
 	}
-	
-	
+
+	#home_app .home_center .tableList {
+		margin: -10px 0px 25px;
+
+	}
+
+	#home_app .home_center .tableList div {
+		color: #eee;
+	}
+
+	#home_app .home_center #pTime {
+		height: 330px;
+
+	}
+
+	#home_app .home_center #bookTime {
+		height: 330px;
+
+	}
+
+	#home_app .home_rigth {
+		margin-right: 10px;
+	}
 
 	#home_app .home_rigth .topList_rigth {
 		/* margin: -20px 0px 10px -285px; */
 		margin-top: -20px;
 		color: #eee;
+		font-size: 22px;
 	}
 
 	#home_app .home_rigth .right_one_two {
@@ -740,9 +1204,14 @@
 	#home_app .home_rigth .right_three_son {
 		/* justify-content: flex-start; */
 		margin-left: -100px;
-		font-size: 12px;
+		font-size: 14px;
 		margin-top: 10px;
 	}
+
+	#home_app .home_rigth .hotKey {
+		width: 360px;
+	}
+
 	/* #home_app  .home_rigth .topList_rigth .el-col {
 		justify-content: space-between;
 	} */

@@ -23,7 +23,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-	background: url(img/beijing.png);
+	background: url(img/bj.png);
+	background-color: rgba(1,1,1,0.2);
 	height: 1066px;
   /* margin-top: 60px; */
 }
